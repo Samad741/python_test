@@ -26,6 +26,17 @@ async def alu_randomised_test(dut):
 
         await Timer(2, units="ns")
         print(f"A = {dut.A.value}, B = {dut.B.value}, Sel = {dut.Sel.value} and F = {dut.F.value}")
+        
+        n = 8  # Example bit width
+
+        # Convert the value to an integer
+        raw_value = int(dut.F.value)
+        
+        # Check if the value is negative in two's complement
+        if raw_value >= 2**(n-1):
+            signed_value = raw_value - 2**n
+        else:
+            signed_value = raw_value
         assert dut.F.value == alu_model(
             A, B, Sel
         ), f"Randomised test failed with: {dut.A.value}, {dut.B.value}, {dut.Sel.value} and {dut.F.value}"

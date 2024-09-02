@@ -2,7 +2,9 @@
 SIM ?= verilator
 TOPLEVEL_LANG ?= verilog
 VERILOG_SOURCES += ./alu.sv
-EXTRA_ARGS += --trace-fst --trace-structs
+
+VERILATOR_FLAGS += -Wno-lint -Wno-UNOPTFLAT -Wno-WIDTH
+EXTRA_ARGS += --trace-fst --trace-structs $(VERILATOR_FLAGS)
 
 simulate: clean clean_ run
 
