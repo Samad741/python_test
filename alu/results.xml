@@ -1,6 +1,9 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1725254096" />
-    <testcase name="alu_randomised_test" classname="alu_tb02" file="/home/samad/python_test/alu/tests/alu_tb02.py" lineno="14" time="0.0032846927642822266" sim_time_ns="20.001" ratio_time="6089.153974305002" />
+    <property name="random_seed" value="1725256677" />
+    <testcase name="alu_basic_test" classname="alu_tb02" file="/home/samad/python_test/alu/tests/alu_tb02.py" lineno="15" time="0.0007171630859375" sim_time_ns="25.001" ratio_time="34860.96885106383" />
+    <testcase name="alu_randomised_test_001" classname="alu_tb02" file="/home/samad/.local/lib/python3.10/site-packages/cocotb/regression.py" lineno="731" time="0.0005350112915039062" sim_time_ns="2.0009999999999977" ratio_time="3740.107978609621">
+      <failure message="Test failed with RANDOM_SEED=1725256677" />
+    </testcase>
   </testsuite>
 </testsuites>
